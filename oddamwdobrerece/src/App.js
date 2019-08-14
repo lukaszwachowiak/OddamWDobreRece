@@ -1,23 +1,31 @@
-import React, { Component, Fragment } from 'react';
+import React, {
+    Component,
+    // Fragment,
+} from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  // Link,
+  Switch
 } from 'react-router-dom';
 
-import Home from "./components/Home.js";
+import Home from "./components/Home/Home";
 
-import './App.css';
+// import './App.css';
 import './scss/main.scss';
-
-// import logo from './logo.svg';
+import HomeHeader from "./components/HomeHeader";
+import HomeFooter from "./components/HomeFooter";
 
 class App extends Component {
   render(){
     return (
         <Router>
           <div className="container">
-            <Route exact path="/" component={Home} />
+              <HomeHeader/>
+            <Switch>
+              <Route exact path="/" component={Home} />
+            </Switch>
+              <HomeFooter/>
           </div>
         </Router>
     );
@@ -25,20 +33,3 @@ class App extends Component {
 }
 
 export default App;
-
-{/*<div className="App">*/}
-{/*  <header className="App-header">*/}
-{/*    <img src={logo} className="App-logo" alt="logo" />*/}
-{/*    <p>*/}
-{/*      Edit <code>src/App.js</code> and save to reload.*/}
-{/*    </p>*/}
-{/*    <a*/}
-{/*      className="App-link"*/}
-{/*      href="https://reactjs.org"*/}
-{/*      target="_blank"*/}
-{/*      rel="noopener noreferrer"*/}
-{/*    >*/}
-{/*      Learn React*/}
-{/*    </a>*/}
-{/*  </header>*/}
-{/*</div>*/}
