@@ -5,7 +5,8 @@ class HomeMainSection extends Component {
         return (
             <article className="mainSectionContainer">
                 <section className="mainSectionLeft">
-                    <img />
+                    {/*<img />*/}
+                    {/*https://create-react-app.dev/docs/adding-images-fonts-and-files*/}
                 </section>
                 <section className="mainSectionRight">
                     <div className="subSectionUpper">
