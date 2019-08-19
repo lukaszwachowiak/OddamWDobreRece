@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 
 const Login = () => {
     return (
-
             <ul className="upperNavigation">
                 <li>
                     <Link to="/logowanie/">Zaloguj się</Link>

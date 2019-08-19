@@ -6,7 +6,7 @@ class HomeThreeColumns extends Component {
             <article className="threeColumnsContainer">
                 <section className="threeColumnsLeftSection">
                     <div className="threeColumnsNumber">10</div>
-                    <h10>ODDANYCH WORKÓW</h10>
+                    <h6>ODDANYCH WORKÓW</h6>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisc <br/>
                         Pellentesque vel enim a elit viverra elementuma <br/>
@@ -15,7 +15,7 @@ class HomeThreeColumns extends Component {
                 </section>
                 <section className="threeColumnsMiddleSection">
                     <div className="threeColumnsNumber">5</div>
-                    <h10>WSPARTYCH ORGANIZACJI</h10>
+                    <h6>WSPARTYCH ORGANIZACJI</h6>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisc <br/>
                         Pellentesque vel enim a elit viverra elementuma <br/>
@@ -24,7 +24,7 @@ class HomeThreeColumns extends Component {
                 </section>
                 <section className="threeColumnsRightSection">
                     <div className="threeColumnsNumber">7</div>
-                    <h10>ZORGANIZOWANYCH ZBIÓREK</h10>
+                    <h6>ZORGANIZOWANYCH ZBIÓREK</h6>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisc <br/>
                         Pellentesque vel enim a elit viverra elementuma <br/>
