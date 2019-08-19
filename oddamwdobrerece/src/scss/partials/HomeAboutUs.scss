@@ -1,0 +1,37 @@
+.aboutUsContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .aboutUsLeftContainerSmall {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+
+    .aboutUsLeftContainerSmallHeader {
+      font-size: 3rem;
+      font-weight: normal;
+    }
+
+    .aboutUsLeftContainerSmallParagraph {
+      font-size: 2rem;
+    }
+
+    .aboutUsLeftContainerSmallSignature {
+      margin-left: 25rem;
+    }
+  }
+
+  .aboutUsRightContainerSmall {
+    width: 50%;
+
+    .aboutUsRightContainerSmallImage {
+      height: 100%;
+      width: 1250px;
+      object-fit: cover;
+    }
+  }
+}
