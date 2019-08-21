@@ -26,12 +26,14 @@
   }
 
   .aboutUsRightContainerSmall {
+    background: url("../../assets/People.jpg") no-repeat left top;
+    background-size: 130%;
     width: 50%;
 
     .aboutUsRightContainerSmallImage {
-      height: 100%;
-      width: 1250px;
-      object-fit: cover;
+      //height: 100%;
+      //width: 1250px;
+      //object-fit: cover;
     }
   }
 }

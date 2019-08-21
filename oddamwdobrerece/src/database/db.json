@@ -1,15 +1,106 @@
 {
   "foundations": [
     {
-      "name": "foundations",
+      "id": 1,
+      "label": "Fundacja Dbam o Zdrowie",
       "items": [
         {
-          "title": "pierwszy",
-          "description": "tekst"
+          "mission": "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej",
+          "description": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+        }
+
+      ]
+    },
+    {
+      "id": 2,
+      "label": "Fundacja Dla Dzieci",
+      "items": [
+        {
+          "mission": "Cel i misja: Pomoc dzieciom z ubogich rodzin",
+          "description": "ubrania, meble, zabawki"
+        }
+
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Fundacja Bez Domu",
+      "items": [
+        {
+          "mission": "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania",
+          "description": "ubrania, jedzenie, ciepłe koce"
+        }
+
+      ]
+    },
+    {
+      "id": 4,
+      "label": "Fundacja 4",
+      "items": [
+        {
+          "mission": "Cel i misja: ",
+          "description": "opis"
+        }
+
+      ]
+    },
+    {
+      "id": 5,
+      "label": "Fundacja 5",
+      "items": [
+        {
+          "mission": "Cel i misja: ",
+          "description": "opis"
+        }
+
+      ]
+    },
+    {
+      "id": 6,
+      "label": "Fundacja 6",
+      "items": [
+        {
+          "mission": "Cel i misja: ",
+          "description": "opis"
+        }
+
+      ]
+    },
+    {
+      "id": 7,
+      "label": "Fundacja 7",
+      "items": [
+        {
+          "mission": "Cel i misja: ",
+          "description": "opis"
+        }
+
+      ]
+    },
+    {
+      "id": 8,
+      "label": "Fundacja 8",
+      "items": [
+        {
+          "mission": "Cel i misja: ",
+          "description": "opis"
+        }
+
+      ]
+    },
+    {
+      "id": 9,
+      "label": "Fundacja 9",
+      "items": [
+        {
+          "mission": "Cel i misja: ",
+          "description": "opis"
         }
 
       ]
     }
+  ],
 
-  ]
+  "organisations": [{"klucz": "wartość"}],
+  "locals": [{"klucz": "wartość"}]
 }

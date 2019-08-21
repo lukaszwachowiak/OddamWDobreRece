@@ -1,0 +1,20 @@
+.whoWeHelpHeader {
+  font-size: 3rem;
+  font-weight: normal;
+  margin-top: 5rem;
+}
+
+.whoWeHelpText {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+
+  .active {
+    border: 1px solid black;
+  }
+}

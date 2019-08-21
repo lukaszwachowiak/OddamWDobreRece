@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 import decoration from '../../assets/Decoration.svg';
 import signature from "../../assets/Signature.svg";
-import people from "../../assets/People.jpg";
+// import people from "../../assets/People.jpg";
 
 class HomeAboutUs extends Component {
     render(){
@@ -21,7 +21,7 @@ class HomeAboutUs extends Component {
                     <img src={signature} alt="signature" className="aboutUsLeftContainerSmallSignature"/>
                 </div>
                 <div className="aboutUsRightContainerSmall">
-                    <img src={people} alt="People" className="aboutUsRightContainerSmallImage"/>
+                    {/*<img src={people} alt="People" className="aboutUsRightContainerSmallImage"/>*/}
                 </div>
             </div>
         )
