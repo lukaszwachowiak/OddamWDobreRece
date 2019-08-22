@@ -1,0 +1,27 @@
+.footerContainer {
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  .footerBlankSpace {
+    display: flex;
+    flex-grow: 2;
+  }
+  .footerHeader {
+    color: $grey-light;
+    margin-right: 3.5rem;
+    width: 20rem;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .footerSocialMedia {
+    display: flex;
+    margin-right: 10rem;
+
+    .footerIcon:last-child {
+      margin-left: 1rem;
+    }
+  }
+}
