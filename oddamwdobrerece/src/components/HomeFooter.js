@@ -9,8 +9,12 @@ class HomeFooter extends Component {
                 <div className="footerBlankSpace"></div>
                 <h3 className="footerHeader">Copyright by Coders Lab</h3>
                 <div className="footerSocialMedia">
-                    <img src={facebookIcon} alt="facebook icon" className="footerIcon"/>
-                    <img src={instagramIcon} alt="instagram icon" className="footerIcon"/>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <img src={facebookIcon} alt="facebook icon" className="footerIcon"/>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <img src={instagramIcon} alt="instagram icon" className="footerIcon"/>
+                    </a>
                 </div>
             </footer>
         )

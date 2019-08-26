@@ -7,9 +7,10 @@ class HomeHelp extends Component {
     constructor(props){
         super(props);
         this.state={
+            number: 0,
+            pages: 3,
             foundations: [],
             current: 0,
-
             organisations: [],
             locals: [],
         }
@@ -21,13 +22,17 @@ class HomeHelp extends Component {
                 .slice(0, 3)
                 .map(foundation => (
                     <div
+                        className="whoWeHelpDataContainer"
                         key={foundation.id}
                     >
-                        <div>
-                            <div>{foundation.label}</div>
-                            <div>{foundation.items[0].mission}</div>
+                        <div className="whoWeHelpLeftDatas">
+                            <div className="whoWeHelpLeftDatasTitle">{foundation.label}</div>
+                            <div className="whoWeHelpLeftDatasDescription">{foundation.items[0].mission}</div>
                         </div>
-                        <div>{foundation.items[0].description}</div>
+                        <div className="whoWeHelpRightDatas">
+                            <div>{foundation.items[0].description}</div>
+                        </div>
+                        <hr className="whoWeHelpHR"/>
                     </div>
                 ));
         } else if (this.state.current === 1) {
@@ -35,13 +40,19 @@ class HomeHelp extends Component {
                 .slice(3, 6)
                 .map(foundation => (
                     <div
+                        className="whoWeHelpDataContainer"
                         key={foundation.id}
                     >
-                        <div>
-                            <div>{foundation.label}</div>
-                            <div>{foundation.items[0].mission}</div>
+                        <div className="whoWeHelpLeftDatas">
+                            <div className="whoWeHelpLeftDatasTitle">{foundation.label}</div>
+                            <div className="whoWeHelpLeftDatasDescription">{foundation.items[0].mission}</div>
                         </div>
-                        <div>{foundation.items[0].description}</div>
+                        <div className="whoWeHelpRightDatas">
+                            <div>
+                                {foundation.items[0].description}
+                            </div>
+                        </div>
+                        <hr className="whoWeHelpHR"/>
                     </div>
                 ));
         } else {
@@ -49,16 +60,85 @@ class HomeHelp extends Component {
                 .slice(6, 9)
                 .map(foundation => (
                     <div
+                        className="whoWeHelpDataContainer"
                         key={foundation.id}
                     >
-                        <div>
-                            <div>{foundation.label}</div>
-                            <div>{foundation.items[0].mission}</div>
+                        <div className="whoWeHelpLeftDatas">
+                            <div className="whoWeHelpLeftDatasTitle">{foundation.label}</div>
+                            <div className="whoWeHelpLeftDatasDescription">{foundation.items[0].mission}</div>
                         </div>
-                        <div>{foundation.items[0].description}</div>
+                        <div className="whoWeHelpRightDatas">
+                            <div>
+                                {foundation.items[0].description}
+                            </div>
+                        </div>
+                        <hr className="whoWeHelpHR"/>
                     </div>
                 ));
         }
+    }
+
+    get OrganistaionTabs(){
+        if (this.state.current === 0 || this.state.current > 1){
+            return this.state.organisations
+                .slice(0, 3)
+                .map(organisation => (
+                    <div
+                        className="whoWeHelpDataContainer"
+                        key={organisation.id}
+                    >
+                        <div className="whoWeHelpLeftDatas">
+                            <div className="whoWeHelpLeftDatasTitle">{organisation.label}</div>
+                            <div className="whoWeHelpLeftDatasDescription">{organisation.items[0].mission}</div>
+                        </div>
+                        <div className="whoWeHelpRightDatas">
+                            <div>{organisation.items[0].description}</div>
+                        </div>
+                        <hr className="whoWeHelpHR"/>
+                    </div>
+                ));
+        } else if (this.state.current === 1) {
+            return this.state.organisations
+                .slice(3, 6)
+                .map(organisation => (
+                    <div
+                        className="whoWeHelpDataContainer"
+                        key={organisation.id}
+                    >
+                        <div className="whoWeHelpLeftDatas">
+                            <div className="whoWeHelpLeftDatasTitle">{organisation.label}</div>
+                            <div className="whoWeHelpLeftDatasDescription">{organisation.items[0].mission}</div>
+                        </div>
+                        <div className="whoWeHelpRightDatas">
+                            <div>
+                                {organisation.items[0].description}
+                            </div>
+                        </div>
+                        <hr className="whoWeHelpHR"/>
+                    </div>
+                ));
+        }
+    }
+
+    get LocalTabs() {
+        return this.state.locals.map( local => (
+            <div
+                className="whoWeHelpDataContainer"
+                key={local.id}
+            >
+                <div className="whoWeHelpLeftDatas">
+                    <div className="whoWeHelpLeftDatasTitle">{local.label}</div>
+                    <div className="whoWeHelpLeftDatasDescription">{local.items[0].mission}</div>
+                </div>
+                <div className="whoWeHelpRightDatas">
+                    <div>
+                        {local.items[0].description}
+                    </div>
+                </div>
+                <hr className="whoWeHelpHR"/>
+            </div>
+            )
+        )
     }
 
     componentDidMount() {
@@ -99,6 +179,29 @@ class HomeHelp extends Component {
         // console.log(selected);
     };
 
+    openFoundations(e){
+        e.preventDefault();
+        this.setState({
+            number: 0,
+            pages: 3,
+        })
+    }
+
+    openOrganisations(e){
+        e.preventDefault();
+        this.setState({
+            number: 1,
+            pages: 2,
+        })
+    }
+
+    openLocal(e){
+        e.preventDefault();
+        this.setState({
+            number: 2,
+        })
+    }
+
     render(){
         // console.log(this.state.foundations);
         // console.log(this.state.organisations);
@@ -111,39 +214,41 @@ class HomeHelp extends Component {
         };
 
         return (
-            <div id="help">
-                <h2 className="whoWeHelpHeader">Komu pomagamy?</h2>
-                <Decoration/>
+            <div id="help" className="whoWeHelpContainer">
                 <div>
-                    <div>Fundacjom</div>
-                    <div>Organizacjom pozarządowym</div>
-                    <div>Lokalnym zbiórkom</div>
+                    <h2 className="whoWeHelpHeader">Komu pomagamy?</h2>
+                    <Decoration className="whoWeHelpDecoration"/>
+                    <div className="whoWeHelpNavigation">
+                        <div onClick={e => this.openFoundations(e)}>Fundacjom</div>
+                        <div onClick={e => this.openOrganisations(e)}>Organizacjom <br/> pozarządowym</div>
+                        <div onClick={e => this.openLocal(e)}>Lokalnym <br/> zbiórkom</div>
+                    </div>
+                    <p style={textStyle} className="whoWeHelpText">{text}</p>
+
+                    {this.state.number === 0 ? this.foundationTabs : null}
+                    {this.state.number === 1 ? this.OrganistaionTabs : null}
+                    {this.state.number === 2 ? this.LocalTabs : null}
+
+                    {this.state.number < 2 ?
+                        <ReactPaginate
+                            previousLabel={''} // reset
+                            nextLabel={''} // reset
+
+                            pageCount={this.state.pages} // ilość stron zależna od ilości informacji
+                            marginPagesDisplayed={3}
+                            pageRangeDisplayed={3}
+                            initialPage={0}
+
+                            onPageChange={this.handlePageClick} // funkcja na zmianę strony
+
+                            containerClassName={'pagination'}
+                            subContainerClassName={'pages pagination'}
+                            activeClassName={'active'}
+                            pageClassName={'subPages'} // li
+                            // pageLinkClassName // a
+                            // activeLinkClassName // active a
+                        /> : null }
                 </div>
-                <p style={textStyle} className="whoWeHelpText">{text}</p>
-
-                {this.foundationTabs}
-                {/* renderowanie warunkowe - event na kliknięcie diva z tekstem FUNDACJOM, defaultowo true!
-                {this.state.JAKASNAZWA ? this.foundationTabs : null}
-                */}
-
-                <ReactPaginate
-                    previousLabel={''} // reset
-                    nextLabel={''} // reset
-
-                    pageCount={3}
-                    marginPagesDisplayed={3}
-                    pageRangeDisplayed={3}
-                    initialPage={0}
-
-                    onPageChange={this.handlePageClick} // funkcja na zmianę strony
-
-                    containerClassName={'pagination'}
-                    subContainerClassName={'pages pagination'}
-                    activeClassName={'active'}
-                    // pageClassName // li
-                    // pageLinkClassName // a
-                    // activeLinkClassName // active a
-                />
             </div>
         )
     }
