@@ -78,7 +78,7 @@ class HomeHelp extends Component {
         }
     }
 
-    get OrganistaionTabs(){
+    get OrganisationTabs(){
         if (this.state.current === 0 || this.state.current > 1){
             return this.state.organisations
                 .slice(0, 3)
@@ -226,7 +226,7 @@ class HomeHelp extends Component {
                     <p style={textStyle} className="whoWeHelpText">{text}</p>
 
                     {this.state.number === 0 ? this.foundationTabs : null}
-                    {this.state.number === 1 ? this.OrganistaionTabs : null}
+                    {this.state.number === 1 ? this.OrganisationTabs : null}
                     {this.state.number === 2 ? this.LocalTabs : null}
 
                     {this.state.number < 2 ?
