@@ -24,13 +24,20 @@ class HomeContact extends Component {
     }
 
     handleOnChange = (name) => (e) => {
-        e.preventDefault();
-        this.setState(prevState => ({
-            [name]: {
-                ...prevState[name],
-                value: e.target.value
-            }
-        }))
+        // e.preventDefault();
+        console.log(e.target.value, name)
+        this.setState({
+            [name]: Object.assign({}, this.state[name], {value: e.target.value})
+        })
+    };
+
+    handleOnBlur = (name) => (e) => {
+        // e.preventDefault();
+        console.log(e.target.value, name)
+        const error = !this.state[name].rule.test(e.target.value)
+        this.setState({
+            [name]: Object.assign({}, this.state[name], {error})
+        })
     };
 
     render(){
@@ -52,8 +59,10 @@ class HomeContact extends Component {
                                     placeholder="Krzysztof"
                                     value={this.state.name.value}
                                     onChange={this.handleOnChange(this.state.name.name)}
+                                    onBlur={this.handleOnBlur(this.state.name.name)}
                                     // onBlur={this.handleOnBlur(this.state.name.name)}
                                 />
+                                {this.state.name.error ? <div> error </div> : false}
                             </div>
                             <div className="contactFormMail">
                                 <label htmlFor="email">Wpisz swój e-mail </label>
