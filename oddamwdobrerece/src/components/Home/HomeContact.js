@@ -20,43 +20,65 @@ class HomeContact extends Component {
                 value: '',
                 rule: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             },
-            text: {
-                name: 'tekst',
-                label: 'wiadomość tekstowa',
-                error: false,
-                rule: /^[a-zA-Z]{120,}$/,
-                value: ''
-            },
+
+            textError: false,
+            textValue: '',
         }
     }
 
+    // input name & input mail
     handleOnChange = (name) => (e) => {
         e.preventDefault();
-        console.log(e.target.value, name);
+        // console.log(e.target.value, name);
         this.setState({
             [name]: Object.assign({}, this.state[name], {value: e.target.value})
         })
     };
-
+    // input name & input mail c.d. - validation
     handleOnBlur = (name) => (e) => {
         e.preventDefault();
-        console.log(e.target.value, name);
+        // console.log(e.target.value, name);
         const error = !this.state[name].rule.test(e.target.value);
         this.setState({
             [name]: Object.assign({}, this.state[name], {error})
         })
     };
 
+    // textarea
+    handleTextChange(e){
+        e.preventDefault();
+
+        this.setState({
+            textValue: e.target.value,
+        })
+    }
+    // textarea c.d. - validation
+    handleTextBlur(e){
+        e.preventDefault();
+
+        if (this.state.textValue.length > 120) {
+            this.setState({
+                textError: false,
+            })
+        }  else {
+            this.setState({
+                textError: true,
+            })
+        }
+    }
+
+    // onSubmit
     message(e){
         e.preventDefault();
-        const url = 'https://fer-api.coderslab.pl/v1/portfolio/contact';
-        fetch("http://localhost:3002/posts", {
+
+        fetch(
+            "http://localhost:3002/posts",
+            {
             method: "post",
             body: JSON.stringify({
-                url: url,
                 name: this.state.name.value,
                 mail: this.state.mail.value,
-                text: this.state.text.value,
+                text: this.state.textValue,
             }),
             headers:{
                 'Content-Type': 'application/json'
@@ -71,6 +93,26 @@ class HomeContact extends Component {
             .catch(function(error) {
                 console.log("Request failed", error);
             });
+
+        // reset stanu lokalnego po wysłaniu wiadomości
+        this.setState({
+            name: {
+                name: 'name',
+                label: 'Imie',
+                error: false,
+                rule: /\S{2,}/,
+                value: ''
+            },
+            mail: {
+                name: 'mail',
+                label: 'Email',
+                error: false,
+                value: '',
+                rule: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            },
+            textError: false,
+            textValue: ''
+        })
     }
 
     render(){
@@ -83,7 +125,11 @@ class HomeContact extends Component {
                 <div className="contactSectionRight">
                     <h2 className="contactSectionRightHeader">Skontaktuj się z nami</h2>
                     <Decoration/>
-                    <form className="contactFormContainer">
+                    <form
+                        className="contactFormContainer"
+                        onSubmit={e => this.message(e)}
+                        // submit na form
+                    >
                         <div className="contactFormNameEmail">
                             <div className="contactFormName">
                                 <label htmlFor="name">Wpisz swoje imię </label>
@@ -95,7 +141,9 @@ class HomeContact extends Component {
                                     onChange={this.handleOnChange(this.state.name.name)}
                                     onBlur={this.handleOnBlur(this.state.name.name)}
                                 />
-                                {this.state.name.error ? <div>NIEPRAWIDŁOWA NAZWA</div> : false}
+                                {this.state.name.error ?
+                                    <div style={{"color": "red"}}>Nieprawidłowa nazwa</div>
+                                    : false}
                             </div>
                             <div className="contactFormMail">
                                 <label htmlFor="email">Wpisz swój e-mail </label>
@@ -107,28 +155,30 @@ class HomeContact extends Component {
                                     onChange={this.handleOnChange(this.state.mail.name)}
                                     onBlur={this.handleOnBlur(this.state.mail.name)}
                                 />
-                                {this.state.mail.error ? <div>NIEPRAWIDŁOWA NAZWA MAILA</div> : false}
+                                {this.state.mail.error ?
+                                    <div style={{"color": "red"}}>Nieprawidłowa nazwa maila</div>
+                                    : false}
                             </div>
                         </div>
                         <div className="contactFormText">
                             <label htmlFor="textarea">Wpisz swoją wiadomość</label>
                             <textarea
-                                // value={this.state.text.value}
-                                // name={this.state.text.name}
-                                // placeholder="wpisz swoją wiadomość"
-                                // onChange={this.handleOnChange(this.state.text.name)}
-                                // onBlur={this.handleOnBlur(this.state.text.name)}
+                                value={this.state.textValue}
+                                placeholder="wpisz swoją wiadomość"
+                                onChange={e => this.handleTextChange(e)}
+                                onBlur={e => this.handleTextBlur(e)}
                             >
                             </textarea>
-                            {this.state.mail.error ?
-                                <div>Wiadomość musi składać się z co najmniej 120 znaków</div>
+                            {this.state.textError ?
+                                <div style={{"color": "red"}}>
+                                    Wiadomość musi składać się z co najmniej 120 znaków
+                                </div>
                                 : false}
                         </div>
                         <div className="contactFormSend">
                             <input
                                 type="submit"
                                 value="Wyślij"
-                                onSubmit={e => this.message(e)}
                             />
                         </div>
                     </form>
