@@ -115,7 +115,7 @@ class HomeContact extends Component {
                             <textarea
                                 // value={this.state.text.value}
                                 // name={this.state.text.name}
-                                placeholder="wpisz swoją wiadomość"
+                                // placeholder="wpisz swoją wiadomość"
                                 // onChange={this.handleOnChange(this.state.text.name)}
                                 // onBlur={this.handleOnBlur(this.state.text.name)}
                             >
