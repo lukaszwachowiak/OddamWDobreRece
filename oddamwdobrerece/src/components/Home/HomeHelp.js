@@ -117,6 +117,8 @@ class HomeHelp extends Component {
                         <hr className="whoWeHelpHR"/>
                     </div>
                 ));
+        } else {
+            return null;
         }
     }
 
