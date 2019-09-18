@@ -4,10 +4,10 @@ import { ReactComponent as Decoration } from '../assets/Decoration.svg';
 
 const SignIn = () => {
     return (
-        <div className="logContainer">
-        <h2 className="logHeader">Załóż konto</h2>
-        <Decoration className="logDecoration"/>
-        <form className="logFormContainer">
+        <div className="signContainer">
+        <h2 className="signHeader">Załóż konto</h2>
+        <Decoration className="signDecoration"/>
+        <form className="signFormContainer">
             <label htmlFor="email">Email</label>
             <input
                 type="email"
@@ -31,13 +31,13 @@ const SignIn = () => {
                 placeholder=""
             />
         </form>
-        <div className="logSmallContainer">
+        <div className="signSmallContainer">
             <ul>
                 <li>
                     <Link to="/logowanie/">Zaloguj się</Link>
                 </li>
                 <li>
-                    <Link>Załóż konto</Link>
+                    <button>Załóż konto</button>
                 </li>
             </ul>
         </div>
