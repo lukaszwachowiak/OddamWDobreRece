@@ -1,0 +1,127 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "Łukasz Wachowiak",
+      "mail": "lukasz.wachowiak@op.pl",
+      "text": "",
+      "id": 2
+    },
+    {
+      "name": "",
+      "mail": "",
+      "text": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "mail": "",
+      "text": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "mail": "",
+      "text": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "mail": "",
+      "text": "dziękuję",
+      "id": 6
+    },
+    {
+      "name": "Łukasz Wachowiak",
+      "mail": "lukasz.wachowiak@op.pl",
+      "text": "a",
+      "id": 7
+    },
+    {
+      "name": "Łukasz Wachowiak",
+      "mail": "lukasz.wachowiak@op.pl",
+      "text": "a",
+      "id": 8
+    },
+    {
+      "name": "Łukasz Wachowiak",
+      "mail": "lukasz.wachowiak@op.pl",
+      "text": "a",
+      "id": 9
+    },
+    {
+      "name": "Łukasz Wachowiak",
+      "mail": "lukasz.wachowiak@op.pl",
+      "text": "d",
+      "id": 10
+    },
+    {
+      "name": "Łukasz Wachowiak",
+      "mail": "lukasz.wachowiak@op.pl",
+      "text": "d",
+      "id": 11
+    },
+    {
+      "name": "",
+      "mail": "",
+      "text": "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890",
+      "id": 12
+    },
+    {
+      "name": "",
+      "mail": "",
+      "text": "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890",
+      "id": 13
+    },
+    {
+      "name": "",
+      "mail": "",
+      "text": "12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890\n",
+      "id": 14
+    },
+    {
+      "name": "Łukasz Wachowiak",
+      "mail": "lukasz.wachowiak@op.pl",
+      "text": "a",
+      "id": 15
+    },
+    {
+      "name": "Łukasz Wachowiak",
+      "mail": "lukasz.wachowiak@op.pl",
+      "text": "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890",
+      "id": 16
+    },
+    {
+      "name": "Łukasz Wachowiak",
+      "mail": "lukasz.wachowiak@op.pl",
+      "text": "[name]: Object.assign({}, this.state[name], {value: e.target.value})[name]: Object.assign({}, this.state[name], {value: e.target.value})[name]: Object.assign({}, this.state[name], {value: e.target.value})[name]: Object.assign({}, this.state[name], {value: e.target.value})",
+      "id": 17
+    },
+    {
+      "name": "Łukasz Wachowiak",
+      "mail": "lukasz.wachowiak@op.pl",
+      "text": "            name: {\n                name: 'name',\n                label: 'Imie',\n                error: false,\n                rule: /\\S{2,}/,\n                value: ''\n            },\n            mail: {\n                name: 'mail',\n                label: 'Email',\n                error: false,\n                value: '',\n                rule: /^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/\n            },            name: {\n                name: 'name',\n                label: 'Imie',\n                error: false,\n                rule: /\\S{2,}/,\n                value: ''\n            },\n            mail: {\n                name: 'mail',\n                label: 'Email',\n                error: false,\n                value: '',\n                rule: /^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/\n            },            name: {\n                name: 'name',\n                label: 'Imie',\n                error: false,\n                rule: /\\S{2,}/,\n                value: ''\n            },\n            mail: {\n                name: 'mail',\n                label: 'Email',\n                error: false,\n                value: '',\n                rule: /^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/\n            },            name: {\n                name: 'name',\n                label: 'Imie',\n                error: false,\n                rule: /\\S{2,}/,\n                value: ''\n            },\n            mail: {\n                name: 'mail',\n                label: 'Email',\n                error: false,\n                value: '',\n                rule: /^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/\n            },",
+      "id": 18
+    },
+    {
+      "name": "",
+      "mail": "",
+      "text": "",
+      "id": 19
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

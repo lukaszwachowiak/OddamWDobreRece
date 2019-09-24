@@ -1,10 +1,24 @@
+@import "./reset/_reset";
 @import "./settings/_fonts";
 @import "./settings/_colors";
+
+@import "./partials/HomeHeader";
+@import "./partials/HomeMainSection";
+@import "./partials/HomeThreeColumns";
+@import "./partials/Home4Steps";
+@import "./partials/HomeAboutUs";
+@import "./partials/HomeHelp";
+@import "./partials/HomeContact";
+@import "./partials/HomeFooter";
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 
-
 body {
   font-family: $font-base;
 }
+
+//// tymczasowe:
+//.container * {
+//  height: 10rem;
+//}
